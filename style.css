@@ -1,0 +1,273 @@
+/* <== propiedades globales ==> */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    display: flex;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(0deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
+article {
+    animation: transitionIn 0.5s;
+}
+/* <== cuerpo ==> */
+
+body {
+    background-color: rgb(255, 254, 227);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 900px;
+
+    width: 95%;
+    height: 100%;
+}
+
+/* <== cabecera ==> */
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: #f3f3f3;
+}
+
+.logo {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.logo_img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+
+}
+
+.nombredelapagina {
+    margin: 10px 0px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 35px;
+    border-radius: 5px;
+    background: rgb(6, 186, 0);
+    background: linear-gradient(
+        45deg,
+        rgba(6, 186, 0, 1) 0%,
+        rgba(7, 212, 0, 0.2) 35%,
+        rgba(255, 255, 255, 1) 45%,
+        rgba(255, 255, 255, 1) 55%,
+        rgba(226, 0, 0, 0.2) 75%,
+        rgba(199, 0, 0, 1) 100%
+    );
+}
+
+.detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles_descripcion {
+    color: rgb(68, 68, 68);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 21px;
+    font-size: 14px;
+}
+
+/* <== menú de navegacion ==> */
+
+nav {
+    display: flex;
+    border: solid 1px #f3f3f3;
+    border-radius: 5px;
+    background: #f3f3f3;
+    max-height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.links_menu {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 5px 10px 10px;
+    background-color: rgb(228, 228, 228);
+    padding: 20px;
+    max-height: 30px;
+    border-radius: 5px;
+}
+
+/* <== cuerpo de la pagina ==> */
+
+article {
+    margin: 1px;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+    font-size: 14px;
+    font-family: "Oswald", sans-serif;
+}
+
+/*    <!-- promociones --> */
+
+.promocion {
+    display: flex;
+}
+
+.promocion_contenido {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+.promocion_imagen {
+    border: 3px rgb(221, 221, 221) solid;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-right: 10px;
+    background: peru;
+    min-width: 120px;
+    width: 120px;
+    min-height: 120px;
+    height: 120px;
+}
+.promocion_imagen_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.promocion_descripcion {
+    align-items: center;
+    margin: 5px 0px 5px 5px;
+
+    margin-left: 5px;
+    font-size: 14px;
+    color: rgb(97, 97, 97);
+}
+.promocion_precio {
+    margin: 5px 0px 5px 5px;
+
+    font-size: 16px;
+}
+
+/*    <!-- menu --> */
+
+.menu_categoria_titulo {
+    padding-left: 10px;
+
+    font-size: 25px;
+    font-weight: 600;
+    background-color: rgb(228, 228, 228);
+}
+
+.producto {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.producto_titulo {
+    font-size: 18px;
+}
+
+.producto_detalles {
+    font-size: 16px;
+    color: rgb(80, 80, 80);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted;
+}
+.producto_precio {
+    font-size: 18px;
+    color: rgb(24, 24, 24);
+}
+
+/* <== pie de pagina ==> */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-bottom: auto;
+    background: rgb(122, 122, 122);
+    height: 100px;
+}
+
+.btn_whatsapp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #46c756;
+    columns: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(red, green, blue, 0.3);
+    z-index: 100;
+}
+
+.btn_whatsapp:hover {
+    text-decoration: none;
+    color: #46c756;
+    background: #fff;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 10px 0 10px 0px;
+}
+.creditos {
+    padding: 5px 0 5px;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    background: rgb(75, 75, 75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
