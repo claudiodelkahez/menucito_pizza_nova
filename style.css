@@ -67,7 +67,6 @@ header {
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
-
 }
 
 .nombredelapagina {
@@ -131,8 +130,6 @@ nav {
     border-radius: 5px;
 }
 
-/* <== cuerpo de la pagina ==> */
-
 article {
     margin: 1px;
     padding: 10px;
@@ -152,6 +149,12 @@ article {
     flex-direction: column;
 
     height: 100%;
+
+
+}
+
+.promocion_titulo {
+    padding-top: 10px;
 }
 .promocion_imagen {
     border: 3px rgb(92, 92, 92) solid;
@@ -199,7 +202,8 @@ article {
     padding-left: 20px;
     padding-right: 10px;
 }
-.producto_titulo {
+.producto_titulo {    padding-top: 7px;
+
     font-size: 18px;
 }
 
