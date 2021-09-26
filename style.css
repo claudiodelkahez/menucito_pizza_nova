@@ -33,7 +33,6 @@ article {
 /* <== cuerpo ==> */
 
 body {
-    background-color: rgb(255, 254, 227);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -126,7 +125,7 @@ nav {
     justify-content: center;
     align-items: center;
     margin: 10px 5px 10px 10px;
-    background-color: rgb(228, 228, 228);
+    background-color: #f3f3f3;
     padding: 20px;
     max-height: 30px;
     border-radius: 5px;
@@ -155,11 +154,11 @@ article {
     height: 100%;
 }
 .promocion_imagen {
-    border: 3px rgb(221, 221, 221) solid;
+    border: 3px rgb(92, 92, 92) solid;
     border-radius: 50%;
     margin-right: 10px;
     margin-right: 10px;
-    background: peru;
+    background: #f3f3f3;
     min-width: 120px;
     width: 120px;
     min-height: 120px;
@@ -183,7 +182,6 @@ article {
 }
 .promocion_precio {
     margin: 5px 0px 5px 5px;
-
     font-size: 16px;
 }
 
