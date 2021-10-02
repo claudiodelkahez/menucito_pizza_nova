@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 html {
     display: flex;
@@ -149,8 +150,6 @@ article {
     flex-direction: column;
 
     height: 100%;
-
-
 }
 
 .promocion_titulo {
@@ -202,7 +201,8 @@ article {
     padding-left: 20px;
     padding-right: 10px;
 }
-.producto_titulo {    padding-top: 7px;
+.producto_titulo {
+    padding-top: 7px;
 
     font-size: 18px;
 }
