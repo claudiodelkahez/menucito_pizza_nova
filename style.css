@@ -274,7 +274,11 @@ footer {
 .footer_titulo {
     text-align: center;
     font-size: 25px;
-    padding: 10px 0px 20px 0px;
+}
+.footer_subtitulo {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0px 40px 0px;
 }
 .contenedor_footer {
     display: flex;
@@ -288,7 +292,7 @@ footer {
     height: 100%;
 
     margin: 0px 10px;
-    padding: 20px 0px; 
+    padding: 50px 0px; 
 }
 .contenedor_footer-detalles {
     text-align: center;
@@ -308,20 +312,32 @@ footer {
 }
 
 .creditos_link {
-    color: orange;
+    color: #ff9509;
 
     text-transform: lowercase;
     text-decoration: none;
     transform: scale(1);
 }
 .creditos_link:hover {
-    color: orange;
+    color: #ff9509;
     font-weight: bold;
     transform: scale(1.2);
 }
 
 .creditos_link:visited,
 .creditos_link:focus {
-    color: rgb(151, 98, 0);
+    color: #ff9509;
 }
 /* <-- FIN FOOTER --> */
+
+@media screen and (min-width: 500px) {
+    .promocion_precio {
+        padding-right: 20px;
+    }
+    .producto_descripcion {
+        padding-left: 5px;
+    }
+    .producto_precio {
+        padding-right: 20px;
+    }
+}
