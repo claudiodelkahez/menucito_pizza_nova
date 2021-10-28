@@ -49,24 +49,20 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
-    background: #f3f3f3;
 }
 
 .logo {
-    width: 100%;
-    height: 200px;
+    height: 350px;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo_img {
-    height: 100%;
-    max-width: 100%;
+    width: 300px;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
     border-radius: 5px;
 }
 
@@ -76,16 +72,6 @@ header {
     font-family: "Oswald", sans-serif;
     font-size: 35px;
     border-radius: 5px;
-    background: rgb(6, 186, 0);
-    background: linear-gradient(
-        45deg,
-        rgba(6, 186, 0, 1) 0%,
-        rgba(7, 212, 0, 0.2) 35%,
-        rgba(255, 255, 255, 1) 45%,
-        rgba(255, 255, 255, 1) 55%,
-        rgba(226, 0, 0, 0.2) 75%,
-        rgba(199, 0, 0, 1) 100%
-    );
 }
 
 .detalles {
@@ -98,8 +84,8 @@ header {
 .detalles_descripcion {
     color: rgb(68, 68, 68);
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 21px;
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 /* <== menú de navegacion ==> */
@@ -108,12 +94,12 @@ nav {
     display: flex;
     border: solid 1px #f3f3f3;
     border-radius: 5px;
-    background: #f3f3f3;
+    background: transparent;
     max-height: 100%;
     width: 100%;
     overflow-x: auto;
     scroll-snap-type: x;
-
+    background-color: #f3f3f3;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -128,15 +114,16 @@ nav {
     justify-content: center;
     align-items: center;
     margin: 10px 5px 10px 10px;
-    background: rgb(8, 141, 12);
-    padding: 20px;
+    background: #303030;
+    padding: 15px;
     max-height: 30px;
     border-radius: 5px;
 }
 
 article {
     margin: 1px;
-    padding: 10px;
+    /*     padding: 10px;
+ */
     background-color: rgb(243, 243, 243);
     font-size: 14px;
     font-family: "Oswald", sans-serif;
@@ -146,32 +133,30 @@ article {
 
 .promocion {
     display: flex;
+    border-bottom: rgb(98, 98, 98) dotted 1px;
 }
 
 .promocion_contenido {
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: right;
-
-    height: 100%;
 }
 
 .promocion_titulo {
     padding-top: 10px;
 }
 .promocion_imagen {
-    border: 3px rgb(8, 141, 12) solid;
+    padding: 5px 0px;
     border-radius: 50%;
     margin-right: 10px;
-    margin-right: 10px;
-    background: rgb(8, 141, 12);
-    min-width: 120px;
-    width: 120px;
-    min-height: 120px;
-    height: 120px;
+    min-width: 110px;
+    width: 110px;
+    min-height: 110px;
+    height: 110px;
 }
-.promocion_imagen_img {
+.promocion_imagen img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -184,32 +169,33 @@ article {
     margin: 5px 0px 5px 5px;
 
     margin-left: 5px;
-    font-size: 14px;
-    color: rgb(211, 0, 0);
+    font-size: 16px;
+    color: rgb(0, 0, 0);
 }
 .promocion_precio {
     text-align: right;
-    border-bottom: rgb(211, 0, 0) dotted 1px;
-    color: rgb(211, 0, 0);
+    color: #303030;
     font-weight: 700;
     margin: 5px 0px 5px 5px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 /*    <!-- menu --> */
 
 .menu_categoria_titulo {
-    padding-left: 5px;
-
     color: rgb(248, 248, 248);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
-    background-color: rgb(8, 141, 12);
+    background-color: #303030;
+    padding: 10px;
+    border-radius: 8px;
 }
-
+.menu_categoria_subtitulo {
+    font-size: 15px;
+}
 .producto {
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 5px;
 }
 .producto_titulo {
     padding-top: 7px;
@@ -218,8 +204,8 @@ article {
 }
 
 .producto_detalles {
-    font-size: 15px;
-    color: rgb(211, 0, 0);
+    font-size: 14px;
+    color: #616161;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px dotted;
@@ -231,65 +217,111 @@ article {
 .producto_precio {
     font-size: 16px;
     font-weight: 700;
-    color: rgb(211, 0, 0);
+    color: #202020;
 }
 
 /* <== pie de pagina ==> */
 
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    margin-bottom: auto;
-    background: rgb(122, 122, 122);
-    height: 100px;
-}
-
+/* <== inicio boton flotante de whatsapp==> */
 .btn_whatsapp {
     position: fixed;
     width: 55px;
     height: 55px;
     line-height: 55px;
-    bottom: 30px;
-    right: 30px;
+    bottom: 15px;
+    right: 15px;
     background: #46c756;
-    columns: #fff;
+    color: #fff;
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
     box-shadow: 0px 1px 10px rgba(red, green, blue, 0.3);
     z-index: 100;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
 }
+
 .btn_whatsapp:visited {
     color: white;
     background: #46c756;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.btn_whatsapp a:visited {
+    color: rgb(19, 19, 19);
 }
 
 .btn_whatsapp:hover {
     text-decoration: none;
-    color: #34a742;
+    transform: scale(1.2);
+
+    color: #46c756;
     background: #fff;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0 ,0, 0.25);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contacto {
+/* <-- INICIO FOOTER --> */
+
+footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 60px;
+    margin-bottom: auto;
+    color: #273036;
+    background: #f3f4f5;
+    height: 100%;
     width: 100%;
-    padding: 10px 0 10px 0px;
+}
+.footer_titulo {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0px 20px 0px;
+}
+.contenedor_footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #fff;
+    background-color: #303030;
+    padding: 10px 0px;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0px 10px;
+    padding: 20px 0px; 
+}
+.contenedor_footer-detalles {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 .creditos {
-    padding: 5px 0 5px;
-    font-size: 14px;
-    color: white;
-    width: 100%;
-    background: rgb(75, 75, 75);
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 10px 0px 10px 0px;
+    font-size: 15px;
+    width: 100%;
 }
+
+.creditos_link {
+    color: orange;
+
+    text-transform: lowercase;
+    text-decoration: none;
+    transform: scale(1);
+}
+.creditos_link:hover {
+    color: orange;
+    font-weight: bold;
+    transform: scale(1.2);
+}
+
+.creditos_link:visited,
+.creditos_link:focus {
+    color: rgb(151, 98, 0);
+}
+/* <-- FIN FOOTER --> */
